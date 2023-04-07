@@ -1,14 +1,18 @@
 {
-  "name": "nexts-typescript-template",
+  "name": "next-typescript-template",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "type-check": "tsc",
+    "lint": "eslint --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\"",
+    "format": "prettier --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\" --write",
+    "prepare": "husky install"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^1.9.3",
     "@types/node": "18.15.11",
     "@types/react": "18.0.33",
     "@types/react-dom": "18.0.11",
@@ -18,8 +22,14 @@
     "next": "13.3.0",
     "postcss": "8.4.21",
     "react": "18.2.0",
+    "react-auth-kit": "^2.10.1",
     "react-dom": "18.2.0",
+    "react-redux": "^8.0.5",
     "tailwindcss": "3.3.1",
     "typescript": "5.0.4"
+  },
+  "devDependencies": {
+    "husky": "^8.0.3",
+    "prettier": "^2.8.7"
   }
 }
