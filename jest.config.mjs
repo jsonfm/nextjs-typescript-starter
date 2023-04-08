@@ -14,7 +14,7 @@ const config = {
   // setupFilesAfterEnv: ['<rootDir>/jest.setup.mjs'],
   modulePaths: ['<rootDir>/'],
   moduleNameMapper: {
-    '@/(.*)': '<rootDir>/src/{.**}/$1'
+    '@/(.*)': '<rootDir>/{.**}/$1'
   },
   modulePathIgnorePatterns: ['cypress'],
   testEnvironment: 'jest-environment-jsdom',
