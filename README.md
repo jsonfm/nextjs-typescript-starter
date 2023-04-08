@@ -7,6 +7,8 @@ A TypeScript starter template for Next.js that includes:
 - 🐶 Husky
 - 🎨 Tailwind
 - 🗂️ `@/` alias import
+- ⚡️ SWR 
+- 🟣 Axios
 
 ### 📦 install
 ```
