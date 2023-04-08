@@ -9,6 +9,8 @@ A TypeScript starter template for Next.js that includes:
 - 🗂️ `@/` alias import
 - ⚡️ SWR 
 - 🟣 Axios
+- 🐞 Jest
+- 🌲 Cypress
 
 ### 📦 install
 ```
@@ -23,4 +25,9 @@ npm run dev
 ### 🚀 Build
 ```
 npm run build
+```
+
+### 🐞 Testing
+```
+npm run test
 ```

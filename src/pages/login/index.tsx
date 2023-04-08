@@ -3,7 +3,6 @@ import { useSignIn } from 'react-auth-kit';
 import { userService } from '@/services/user.service';
 import { useRouter } from 'next/router';
 
-
 const Login = () => {
     const router = useRouter();
     const signIn = useSignIn();
