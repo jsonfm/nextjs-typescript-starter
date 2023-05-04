@@ -1,7 +1,7 @@
-import React from 'react';
-import { useSignIn } from 'react-auth-kit';
-import { userService } from '@/services/user.service';
-import { useRouter } from 'next/router';
+import React from "react";
+import { useSignIn } from "react-auth-kit";
+import { userService } from "@/services/user.service";
+import { useRouter } from "next/router";
 
 const Login = () => {
     const router = useRouter();
@@ -9,8 +9,8 @@ const Login = () => {
 
     const onSubmit = async () => {
         const { user, token, expiresIn } = await userService.login(
-            'email@example.com',
-            'password',
+            "email@example.com",
+            "password",
         );
         const response = signIn({
             token,
@@ -20,9 +20,9 @@ const Login = () => {
         });
 
         if (!!response) {
-            router.push('/');
+            router.push("/");
         } else {
-            alert('Error during login!');
+            alert("Error during login!");
         }
     };
 

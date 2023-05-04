@@ -1,5 +1,5 @@
-import { productsService } from '@/services/products.service';
-import useSWR from 'swr';
+import { productsService } from "@/services/products.service";
+import useSWR from "swr";
 
 export const Products = () => {
     const {
