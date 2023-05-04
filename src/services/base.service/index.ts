@@ -1,11 +1,11 @@
 class BaseService {
-	create = async () => {};
+  create = async () => {};
 
-	read = async () => {};
+  read = async () => {};
 
-	update = async () => {};
+  update = async () => {};
 
-	delete = async () => {};
+  delete = async () => {};
 }
 
 export const baseService = new BaseService();
