@@ -1,12 +1,7 @@
-import { productsService } from "@/services/products.service";
-import useSWR from "swr";
+import { useGetProducts } from "@/hooks/products";
 
 export const Products = () => {
-    const {
-        data: products,
-        isLoading,
-        error,
-    } = useSWR(null, () => productsService.getAllProducts());
-
+    const { products } = useGetProducts();
+    console.log("🚀 ~ file: products.tsx:5 ~ Products ~ products:", products);
     return <div>Products</div>;
 };

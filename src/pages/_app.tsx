@@ -1,15 +1,28 @@
 import "@/styles/globals.css";
-import type { AppProps } from "next/app";
-import { AuthProviderWrapper } from "@/auth";
 import { store } from "@/redux/store";
 import { Provider } from "react-redux";
+import { Layout } from "@/components/Layout";
+import { SessionProvider } from "next-auth/react";
+import { AuthRequired } from "@/auth/components";
 
-export default function App({ Component, pageProps }: AppProps) {
+interface CustomAppProps {
+    Component: any;
+    pageProps: any;
+}
+
+export default function App({ Component, pageProps }: CustomAppProps) {
     return (
-        <AuthProviderWrapper>
+        <SessionProvider session={pageProps?.session}>
             <Provider store={store}>
-                <Component {...pageProps} />
+                <Layout>
+                    {!!Component?.auth && (
+                        <AuthRequired>
+                            <Component {...pageProps} />
+                        </AuthRequired>
+                    )}
+                    {!Component?.auth && <Component {...pageProps} />}
+                </Layout>
             </Provider>
-        </AuthProviderWrapper>
+        </SessionProvider>
     );
 }

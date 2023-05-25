@@ -1,15 +1,18 @@
 {
-  "plugins": ["@typescript-eslint"],
-  "extends": [
-    "next/core-web-vitals",
-    "plugin:jest-dom/recommended",
-    "plugin:@typescript-eslint/recommended",
-	"plugin:@next/next/recommended",
-    "prettier",
-	"next"
-  ],
-  "rules": {
-    "@typescript-eslint/no-unused-vars": "error",
-	"quotes": ["error", "double"]
-  }
+	"extends": [
+		"next/core-web-vitals",
+		"plugin:jest-dom/recommended",
+		"eslint:recommended",
+		"plugin:@typescript-eslint/recommended",
+		"next"
+	],
+	"parser": "@typescript-eslint/parser",
+	"plugins": ["prettier"],
+	"rules": {
+		"@typescript-eslint/no-unused-vars": "warn",
+		"@typescript-eslint/no-empty-function": "warn",
+		"@typescript-eslint/no-inferrable-types": "warn",
+		"@typescript-eslint/ban-ts-comment": "warn",
+		"no-extra-boolean-cast": "warn"
+	}
 }
